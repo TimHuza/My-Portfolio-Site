@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.name }}{% endblock title %}
+
+{% block content %}
+    <div class="courses">
+        <h2>Recommended courses by me!</h2>
+        <table class="course-card">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Platform</th>
+                    <th>Language</th>
+                    <th>Teacher</th>
+                    <th>Price</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in courses %}
+                    <tr>
+                        <td>{{ course.name }}</td>
+                        <td>{{ course.platform}}</td>
+                        <td>{{ course.language }}</td>
+                        <td>{{ course.teacher }}</td>
+                        <td>{{ course.price }}</td>
+                        <td><a href="{{ course.link }}" target="_blank" rel="noopener" class="link-btn">Link</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

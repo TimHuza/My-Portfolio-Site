@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 style="text-align: center; margin-top: 50px;">Projects</h1>
+    <div class="project-container">
+        {% for project in projects %}
+            <div class="project-card">
+                {% if project.image %}
+                    <div class="project-img">
+                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="project-image">
+                    </div>
+                {% endif %}
+                <h2 class="project-title">{{ project.name }}</h2>
+                <p class="project-description">{{ project.description }}</p>
+                <div class="buttons">
+                    <div>
+                        <a href="{{ project.github_link }}"><button class="github-btn"><i class="fab fa-github"></i></button></a>                
+                    </div>
+                    <div>
+                        <button class="like-btn" data-project-id="{{ project.id }}"><i class="fas fa-heart"></i></button>
+                    </div>
+                    <div>
+                        <button class="comment-btn"><i class="fa-solid fa-comment"></i></button>
+                    </div>
+                    <div>
+                        <a href="{% url 'project:project_detail' slug=project.slug %}"><button class="read-more-btn">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

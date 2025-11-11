@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block home_content %}
+<header>
+        <img src="{% static 'images/TH-Logo.png' %}" alt="Logo" class="logo-img">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#courses">Courses</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="{% url 'project:cart' %}">
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Liked Projects</button>
+            </a>
+        </div>
+    </header>
+    
+    <div class="about-me-container">
+        <div class="photo-container">
+            <img src="{% static 'images/my-img.jpg' %}" alt="Tim's Photo" class="photo">
+            <div class="btns">
+                <div class="top-btns">
+                    <a  href="https://www.instagram.com/timmro__/"><button class="instagram-btn"><i class="fa-brands fa-instagram"></i> Instagram</button></a>
+                    <a href="https://www.youtube.com/@TimHuza"><button class="youtube-btn"><i class="fa-brands fa-youtube"></i> Youtube</button></a>
+                </div>
+                <div class="bottom-btns">
+                    <a href="https://github.com/TimHuza"><button class="github-btn-home"><i class="fab fa-github"></i> Github</button></a>
+                    <a href="https://x.com/TimHuza25"><button class="twitter-btn"><i class="fa-brands fa-twitter"></i> Twitter</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <h1>Tim Huza</h1>
+            <p>I'm a junior developer. My journey started when I was 12 years old. I have tried a lot of programming languages. My favorite language is Python. I spend a lot of time programming in this language. My programming/coding journey I started in Roblox Studio with programming language Lua it's a bit similar to Python but diffirent. Then I started to code on Python.</p>
+            <p>I started my journey from making games in Constract 3. And I made 4 Games</p>
+            <ul style="margin-top: -15px;">
+                <li>Bothgam</li>
+                <li>Carace</li>
+                <li>Jump For Robi</li>
+                <li>Shootel</li>
+            </ul>
+            <p style="margin-top: -15px;">Those games like Scratch, builded with blocks.</p>
+            <p>Next I started to code in Roblox Studio. Roblox Studio uses Lua language to write games. It's similar to python, but still different. It helped me to learn python faster and understand many languages faster. My first game in Roblox was Camping Game from the coourse.</p>
+            <p>Then I started to learn Python. This is where all those projects from. To do those projects was fun and good for learning skills.</p>
+            <p>My hobbie is to film. And I am a half videographer. I love programming, but I also love to edit and film videos, any type of videos. I have an instagram channel for my car bloging. In the future I think about making a youtube channel about programming. The programms I use is CapCut and Filmora 14.</p>
+        </div>
+    </div>
+
+    <div class="skills" id="skills">
+        <h1 style="text-align: center; margin-top: 50px;">Skills</h1>
+        <div style="justify-items: center;">
+            <p>I have expereinec in a lot of tools, programming languages, libraries, frameworks, and Editors.</p>
+            <p>My skills you can see bellow but it's the languages I've a bit of experince with.</p>
+        </div>
+        <div class="skill-languages-tools" style="justify-items: center;">
+            <div class="skill-languages" style="margin-bottom: 20px;">
+                <h2>Languages</h2>
+                <div class="skill-content-one">
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        </div>
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
+                        </div>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"/>
+                        </div>
+                        <p>HTML</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"/>
+                        </div>
+                        <p>CSS</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"/>
+                        </div>
+                        <p>GO</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"/>
+                        </div>
+                        <p>LUA</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"/>
+                        </div>
+                        <p>MYSQL</p>
+                    </div>
+                </div>
+                
+                <h3 class="libraries">Libraries & Frameworks</h3>
+                <div class="skill-content-two">
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"/>
+                        </div>
+                        <p>React</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"/>
+                        </div>
+                        <p>Django</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="all-logo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"/>
+                        </div>
+                        <p>FastAPI</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-tools">
+                <div>
+                    <h2>Tools</h2>
+                    <div class="skill-content-one">
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                            </div>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"/>
+                            </div>
+                            <p>Docker</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"/>
+                            </div>
+                            <p>Figma</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"/>
+                            </div>
+                            <p>GitHub</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"/>
+                            </div>
+                            <p>Firebase</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"/>
+                            </div>
+                            <p>Arduino</p>
+                        </div>
+                    </div>
+                    <h3 class="libraries">Editors & Systems</h3>
+                    <div class="skill-content-two">
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code logo"/>
+                            </div>
+                            <p>VS Code</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg"/>
+                            </div>
+                            <p>Pycharm</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/processing/processing-original.svg"/>
+                            </div>
+                            <p>Processing</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"/>
+                            </div>
+                            <p>Linux</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="all-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg"/>
+                            </div>
+                            <p>Windows</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock home_content %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 id="projects" style="text-align: center; margin-top: 50px;">Projects</h1>
+    <div class="project-container">
+        {% for project in projects %}
+            <div class="project-card">
+                {% if project.image %}
+                    <div class="project-img">
+                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="project-image">
+                    </div>
+                {% endif %}
+                <h2 class="project-title">{{ project.name }}</h2>
+                <p class="project-description">{{ project.description }}</p>
+                <div class="buttons">
+                    <div>
+                        <a href="{{ project.github_link }}"><button class="github-btn"><i class="fab fa-github"></i></button></a>                
+                    </div>
+                    <div>
+                        <button class="like-btn" data-project-id="{{ project.id }}"><i class="fas fa-heart"></i></button>
+                    </div>
+                    <div>
+                        <button class="comment-btn"><i class="fa-solid fa-comment"></i></button>
+                    </div>
+                    <div>
+                        <a href="{% url 'project:project_detail' slug=project.slug %}"><button class="read-more-btn">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="courses" id="courses">
+        <h2>Recommended courses by me!</h2>
+        <table class="course-card">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Platform</th>
+                    <th>Language</th>
+                    <th>Teacher</th>
+                    <th>Price</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in courses %}
+                    <tr>
+                        <td>{{ course.name }}</td>
+                        <td>{{ course.platform}}</td>
+                        <td>{{ course.language }}</td>
+                        <td>{{ course.teacher }}</td>
+                        <td>{{ course.price }}</td>
+                        <td><a href="{{ course.link }}" target="_blank" rel="noopener" class="link-btn">Link</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    for (const link of navLinks) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href");
+            
+            // For the "Home" link, scroll to the top of the page
+            if (targetId === "#") {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+                return;
+            }
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

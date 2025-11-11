@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.name }}{% endblock title %}
+
+{% block content %}
+    <div class="detail-container">
+        <div class="left-content">
+            <h1>{{ project.name }}</h1>
+            <div class="project-description">
+                {{ project.detail_description|linebreaksbr }}
+            </div>
+            <div class="back-button" style="text-align: center;">
+                <a href="{% url 'home' %}" class="back-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 5px;"></i>Back</a>
+            </div>
+        </div>
+        <div class="right-content">
+            {% if project.image %}
+                <div class="project-img-detail">
+                    <img src="{{ project.image.url }}" alt="{{ project.name }}" class="project-image-detail" style="width: 100%; height: 250px; border: 1px solid #ddd; border-radius: 8px; object-fit: cover; margin-top: 30px;">
+                </div>
+            {% endif %}            
+        </div>
+    </div>
+{% endblock content %}

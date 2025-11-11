@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="cart-container">
+    <h1>Liked Projects</h1>
+    {% if projects %}
+        <div class="cart-items">
+            {% for project in projects %}
+                <div class="cart-item">
+                    <img src="{{ project.image.url }}" alt="{{ project.name }}" class="cart-item-image">
+                    <span class="cart-item-name">{{ project.name }}</span>
+                    <button class="delete-btn" data-project-id="{{ project.id }}">Delete</button>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Your liked projects list is empty.</p>
+    {% endif %}
+    <div class="back-button" style="text-align: center;">
+        <a href="{% url 'home' %}" class="back-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 5px;"></i>Back</a>
+    </div>
+</div>
+{% endblock %}
