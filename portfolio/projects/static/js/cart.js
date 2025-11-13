@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         console.log('like clicked', this.dataset.projectId);
         const projectId = this.dataset.projectId;
-        fetch(`/add-to-cart/${projectId}/`)
+        fetch(`/projects/add-to-cart/${projectId}/`)
             .then(r => r.json())
             .then(data => {
             console.log('add-to-cart response', data);
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.delete-btn').forEach(btn => {
         btn.addEventListener('click', function () {
             const projectId = this.dataset.projectId;
-            fetch(`/remove-from-cart/${projectId}/`)
+            fetch(`/projects/remove-from-cart/${projectId}/`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === 'success') {
